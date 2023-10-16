@@ -1,2 +1,2 @@
 # cs564
-projects
+Database Projects
