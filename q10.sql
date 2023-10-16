@@ -1,0 +1,1 @@
+SELECT employees.employee_id FROM employees LEFT JOIN dependents ON employees.employee_id = dependents.employee_id WHERE dependents.dependent_id IS NULL;

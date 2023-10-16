@@ -1,0 +1,1 @@
+SELECT COUNT(employees.employee_id) FROM employees, departments WHERE employees.department_id = departments.department_id AND departments.department_name = "Shipping";

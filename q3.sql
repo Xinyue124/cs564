@@ -1,0 +1,1 @@
+SELECT departments.department_name, AVG(jobs.max_salary) AS avgSalary FROM departments, employees, jobs WHERE employees.department_id = departments.department_id AND employees.job_id = jobs.job_id GROUP BY departments.department_name HAVING avgSalary > 8000;

@@ -1,0 +1,1 @@
+SELECT countries.country_name from countries, regions WHERE countries.region_id = regions.region_id AND regions.region_name = "Europe";

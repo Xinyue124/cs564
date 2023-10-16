@@ -1,0 +1,1 @@
+SELECT departments.department_name FROM departments, employees WHERE departments.department_id = employees.department_id GROUP BY departments.department_id HAVING employees.salary = (SELECT MAX(employees.salary) FROM employees);
