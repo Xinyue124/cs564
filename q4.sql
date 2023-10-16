@@ -1,1 +1,4 @@
-SELECT COUNT(employees.employee_id) FROM employees, departments WHERE employees.department_id = departments.department_id AND departments.department_name = "Shipping";
+SELECT COUNT(e.employee_id) AS number_of_employees
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_name = 'Shipping';
