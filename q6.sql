@@ -1,1 +1,7 @@
-SELECT COUNT(employees.employee_id) FROM employees, departments, locations, countries, regions WHERE employees.department_id = departments.department_id AND departments.location_id = locations.location_id AND locations.country_id = countries.country_id AND countries.region_id = regions.region_id AND regions.region_name = "Europe";
+SELECT COUNT(e.employee_id) AS number_of_employees
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id
+JOIN countries c ON l.country_id = c.country_id
+JOIN regions r ON c.region_id = r.region_id
+WHERE r.region_name = 'Europe';
