@@ -1,1 +1,4 @@
-SELECT employees.manager_id, MIN(employees.salary) FROM employees;
+SELECT manager_id, salary
+FROM employees
+WHERE salary = (SELECT MIN(salary) FROM employees)
+LIMIT 1;
