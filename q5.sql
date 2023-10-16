@@ -1,1 +1,4 @@
-SELECT countries.country_name from countries, regions WHERE countries.region_id = regions.region_id AND regions.region_name = "Europe";
+SELECT c.country_name
+FROM countries c
+JOIN regions r ON c.region_id = r.region_id
+WHERE r.region_name = 'Europe';
