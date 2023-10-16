@@ -1,2 +1,10 @@
-SELECT one.first_name, two.first_name FROM employees AS one, employees AS two
-WHERE one.department_id = two.department_id AND one.manager_id = two.manager_id AND one.employee_id != two.employee_id AND one.salary > 10000 AND two.salary > 10000 AND one.salary >= two.salary;
+SELECT e1.first_name || ' ' || e1.last_name AS employee_name_1,
+       e2.first_name || ' ' || e2.last_name AS employee_name_2
+FROM employees e1
+JOIN employees e2 ON e1.department_id = e2.department_id
+                  AND e1.manager_id = e2.manager_id
+                  AND e1.salary >= e2.salary
+WHERE e1.employee_id <> e2.employee_id
+      AND e1.salary > 10000 
+      AND e2.salary > 10000
+ORDER BY e1.first_name, e1.last_name, e2.first_name, e2.last_name;
