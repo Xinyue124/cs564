@@ -1,2 +1,3 @@
 # cs564
-projects
+Database Projects
+SQL Queries

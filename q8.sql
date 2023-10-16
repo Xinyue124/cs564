@@ -1,0 +1,1 @@
+SELECT employees.manager_id, MIN(employees.salary) FROM employees;

@@ -1,0 +1,1 @@
+SELECT departments.department_name, COUNT(employees.employee_id) AS employeeNum FROM employees, departments WHERE employees.department_id = departments.department_id GROUP BY departments.department_name ORDER by employeeNum DESC;

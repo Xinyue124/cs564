@@ -1,0 +1,2 @@
+SELECT one.first_name, two.first_name FROM employees AS one, employees AS two
+WHERE one.department_id = two.department_id AND one.manager_id = two.manager_id AND one.employee_id != two.employee_id AND one.salary > 10000 AND two.salary > 10000 AND one.salary >= two.salary;
